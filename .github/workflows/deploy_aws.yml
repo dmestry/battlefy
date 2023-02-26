@@ -25,9 +25,9 @@ jobs:
       - name: test AWS cdk
         run: 'cdk version'
 
-      - name: hello
-        run: 'sh hello.sh'
-        working-directory: AWS-CDK
+#      - name: hello
+#        run: 'sh hello.sh'
+#        working-directory: AWS-CDK
 
 #      - name: CDK Synth
 #        run: cdk synth
