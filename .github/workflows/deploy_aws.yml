@@ -17,15 +17,18 @@ jobs:
           aws-region: 'us-west-2'
 
       - name: install npm
-        run: 'sudo apt update -y && sudo apt install node-js npm -y'
+        run: 'sudo apt update -y && sudo apt install nodejs npm -y'
 
       - name: install AWS cdk
         run: 'sudo npm install -g aws-cdk'
 
-      - name: CDK Synth
-        run: cdk synth
-        working-directory: AWS-CDK
+      - name: test AWS cdk
+        run: 'cdk version'
+        
+#      - name: CDK Synth
+#        run: cdk synth
+#        working-directory: AWS-CDK
 
-      - name: CDK Deploy
-        run: cdk deploy
-        working-directory: AWS-CDK
+#      - name: CDK Deploy
+#        run: cdk deploy
+#        working-directory: AWS-CDK
